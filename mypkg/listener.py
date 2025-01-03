@@ -1,17 +1,17 @@
+# SPDX-FileCopyrightText: 2024 Reo Isaka
+# SPDX-License-Identifier: BSD-3-Clause
+
+
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int16
-
+from std_msgs.msg import String
 
 rclpy.init()
 node = Node("listener")
 
-
 def cb(msg):
-    global node
-    node.get_logger().info("Listen: %s" % msg.data)
-
+    node.get_logger().info(f"Received: {msg.data}")
 
 def main():
-    pub = node.create_subscription(Int16, "countup", cb, 10)
+    node.create_subscription(String, "countup", cb, 10)
     rclpy.spin(node)
