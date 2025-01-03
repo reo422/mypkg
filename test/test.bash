@@ -8,7 +8,7 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 73 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
+timeout 63 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
-grep '0:01:03'
+grep 'Received: 0:01:03'
