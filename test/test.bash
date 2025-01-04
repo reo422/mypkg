@@ -11,4 +11,4 @@ source $dir/.bashrc
 timeout 70 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
-grep 'Received: 0:01:03'
+grep 'Received: 0:01:03 (63s)'
