@@ -7,8 +7,8 @@ from std_msgs.msg import String
 
 
 rclpy.init()
-node = Node("talker")
-pub = node.create_publisher(String, "countup", 10)
+node = Node("systemtime")
+pub = node.create_publisher(String, "systemtime", 10)
 counter = 0
 
 
@@ -22,7 +22,7 @@ def cb():
 
 
     msg = String()
-    msg.data = time_str
+    msg.data = f"{time_str} ({counter}s)"
     pub.publish(msg)
     counter += 1
 
