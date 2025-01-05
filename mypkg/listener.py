@@ -6,11 +6,11 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 rclpy.init()
-node = Node("Test")
+node = Node("Alert")
 
 def cb(msg):
     node.get_logger().info(f"{msg.data}")
 
 def main():
-    node.create_subscription(String, "systemtime", cb, 10)
+    node.create_subscription(String, "timenotifications", cb, 10)
     rclpy.spin(node)
