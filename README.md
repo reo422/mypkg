@@ -25,13 +25,7 @@
 ```
 
 # 実行例
-temperaturepublisherノードの実行結果
-```bash
-[INFO] [1736085876.768697742] [temperaturepublisher]: 動作確認:35.8
-[INFO] [1736085877.759581278] [temperaturepublisher]: 動作確認:36.5
-[INFO] [1736085878.759431560] [temperaturepublisher]: 動作確認:38.0
-```
-bodyalertノードの実行結果
+temperaturepublisherノード、bodyalertノードの実行結果
 ```bash
 [INFO] [1736085876.774851391] [bodyalert]: 35.8度:体を温めてください。
 [INFO] [1736085877.762016491] [bodyalert]: 36.5度:健康です。
@@ -44,3 +38,7 @@ bodyalertノードの実行結果
 ```
 # 注意事項
 ・temperaturepublisherノードは、サンプルデータを使用して体温を公開します。データが完了した後は、ランダムな体温値を生成して継続的にアラートを送信します。
+# ライセンス
+このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されています。
+
+© 2024 Reo Isaka
