@@ -37,7 +37,7 @@ temperaturepublisherノード、bodyalertノードの実行結果
 # 注意事項
 temperaturepublisherノードは、サンプルデータを使用して体温を公開します。データが完了した後は、ランダムな体温値を生成して継続的にアラートを送信します。
 
-#テスト環境
+# テスト環境
 Ubuntu 20.04
 
 # ライセンス
