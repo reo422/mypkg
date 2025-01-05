@@ -14,16 +14,7 @@ pub = node.create_publisher(String, "temperaturealerts", 10)
 def cb():
     bt = random.uniform(35.5, 42.0)
     alert = String()
-
-    if bt < 36.0: 
-        alert.data = f"{bt:.2f}度。体を温めてください。"
-    elif 36.0 <= bt < 37.0:
-        alert.data = f"{bt:.2f}度。正常です。"
-    elif 37.0 <= bt < 38.0:
-        alert.data = f"{bt:.2f}度。安静が必要です。"
-    else:
-        alert.data = f"{bt:.2f}度。すぐ医師に相談してください。"
- 
+    alert.data = f"{bt:.1f}"
     pub.publish(alert)
 
 def main():

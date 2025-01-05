@@ -9,8 +9,16 @@ rclpy.init()
 node = Node("bodyalert")
 
 def cb(msg):
-    information = f"体温: {msg.data}"
-    node.get_logger().info(information)
+    bt = float(msg.data)
+    if bt < 36.0:
+        node.get_logger().info(f"{bt:.1f}度 体を温めてください。")
+    elif 36.0 <= bt < 37.0:
+        node.get_logger().info(f"{bt:.1f}度 健康です。")
+    elif 37.0 <= bt < 38.0:
+        node.get_logger().info(f"{bt:.1f}度 安静が必要です。")
+    else:
+        node.get_logger().info(f"{bt:.1f}度 すぐに医師に相談してください。")
+
 
 def main():
     node.create_subscription(String, "temperaturealerts", cb, 10)
