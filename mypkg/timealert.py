@@ -6,7 +6,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 rclpy.init()
-node = Node("alert")
+node = Node("timealert")
 
 def cb(msg):
     node.get_logger().info(f"{msg.data}")
