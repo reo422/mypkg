@@ -8,7 +8,7 @@ from std_msgs.msg import String
 
 rclpy.init()
 node = Node("systemtime")
-pub = node.create_publisher(String, "systemtime", 10)
+pub = node.create_publisher(String, "timenotifications", 10)
 counter = 0
 
 
