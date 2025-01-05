@@ -14,7 +14,7 @@ def cb(msg):
         node.get_logger().info(f"{bt:.1f}度:体を温めてください。")
     elif 36.0 <= bt < 37.0:
         node.get_logger().info(f"{bt:.1f}度:健康です。")
-    elif 37.0 <= bt < 40.0:
+    elif 37.0 <= bt:
         node.get_logger().info(f"{bt:.1f}度:病院に行きましょう。")
 
 
