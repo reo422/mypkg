@@ -17,7 +17,7 @@ def cb():
 
     if counter == 10:
         alert = String()
-        alert.data = "10 seconds have passed"
+        alert.data = "10 seconds have passed!"
         pub.publish(alert)
 
     if counter == 60:
