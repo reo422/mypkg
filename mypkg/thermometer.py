@@ -17,12 +17,12 @@ def cb():
 
     if counter == 10:
         alert = String()
-        alert.data = "10 seconds have passed!"
+        alert.data = "10秒経過しました! システムは正常に動いてます。"
         pub.publish(alert)
 
     if counter == 60:
         secondalert = String()
-        secondalert.data = "1 minute has passed!"
+        secondalert.data = "1分が経過しました!システムはまだ実行中です。"
         pub.publish(secondalert)
 
     counter += 1
