@@ -18,7 +18,7 @@ def cb():
     if counter < len(testbt):
         bt = testbt[counter]
         alert = String()
-        alert.data = f"動作確認:{bt:.1f}"
+        alert.data = f"{bt:.1f}"
         pub.publish(alert)
         counter += 1
     else:
