@@ -6,7 +6,9 @@
 
 # 概要
 ・temperaturepublisherノードは、サンプルの体温データを1秒ごとにtemperaturealertsトピックに公開します。
+
 ・bodyalertノードは、temperaturealertsトピックから体温データを受信し、体温に基づいてメッセージを表示します。
+
 　36.0度未満:体を温めてください。
 　36.0度から37.0度:健康です。
   37.0度以上:病院に行きましょう。
@@ -22,7 +24,23 @@
    ros2 run mypkg bodyalert
 ```
 
-# 実行結果
-
+# 実行例
+temperaturepublisherノードの実行結果
+```bash
+[INFO] [1736085876.768697742] [temperaturepublisher]: 動作確認:35.8
+[INFO] [1736085877.759581278] [temperaturepublisher]: 動作確認:36.5
+[INFO] [1736085878.759431560] [temperaturepublisher]: 動作確認:38.0
+```
+bodyalertノードの実行結果
+```bash
+[INFO] [1736085876.774851391] [bodyalert]: 35.8度:体を温めてください。
+[INFO] [1736085877.762016491] [bodyalert]: 36.5度:健康です。
+[INFO] [1736085878.761839937] [bodyalert]: 38.0度:病院に行きましょう。
+[INFO] [1736085881.760506401] [bodyalert]: 35.8度:体を温めてください。
+[INFO] [1736085882.761341638] [bodyalert]: 37.4度:病院に行きましょう。
+[INFO] [1736085884.761043553] [bodyalert]: 36.4度:健康です。
+[INFO] [1736085885.760956194] [bodyalert]: 36.3度:健康です。
+・・・
+```
 # 注意事項
 ・temperaturepublisherノードは、サンプルデータを使用して体温を公開します。データが完了した後は、ランダムな体温値を生成して継続的にアラートを送信します。
