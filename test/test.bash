@@ -8,7 +8,10 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 70 ros2 launch mypkg time.launch.py > /tmp/mypkg.log
+timeout 30 ros2 launch mypkg temp.launch.py > /tmp/mypkg.log
 
-cat /tmp/mypkg.log | grep '10 seconds have passed!'
-cat /tmp/mypkg.log | grep '1 minute has passed!'
+cat /tmp/mypkg.log | grep '度。'
+cat /tmp/mypkg.log | grep '体を温めてください。'
+cat /tmp/mypkg.log | grep '正常です。'
+cat /tmp/mypkg.log | grep '安静が必要です。'
+cat /tmp/mypkg.log | grep 'すぐ医師に相談してください。'
