@@ -9,7 +9,8 @@ rclpy.init()
 node = Node("timealert")
 
 def cb(msg):
-    node.get_logger().info(f"{msg.data}")
+    information = f"時間通知: {msg.data}"
+    node.get_logger().info(information)
 
 def main():
     node.create_subscription(String, "timenotifications", cb, 10)
