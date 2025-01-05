@@ -6,12 +6,12 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 rclpy.init()
-node = Node("timealert")
+node = Node("bodyalert")
 
 def cb(msg):
-    information = f"時間通知: {msg.data}"
+    information = f"体温: {msg.data}"
     node.get_logger().info(information)
 
 def main():
-    node.create_subscription(String, "timenotifications", cb, 10)
+    node.create_subscription(String, "temperaturealerts", cb, 10)
     rclpy.spin(node)
