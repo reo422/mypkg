@@ -10,6 +10,5 @@ colcon build
 source $dir/.bashrc
 timeout 70 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
-cat /tmp/mypkg.log |
-grep '10 seconds have passed!'
-grep '1 minute has passed!'
+cat /tmp/mypkg.log | grep '10 seconds have passed!'
+cat /tmp/mypkg.log | grep '1 minute has passed!'
