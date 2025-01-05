@@ -15,15 +15,16 @@ counter = 0
 def cb():
     global counter
 
-    hours = counter // 3600
-    minutes = (counter % 3600)  // 60
-    seconds = counter % 60
-    time_str = f"{hours:01}:{minutes:02}:{seconds:02}"
+    if counter == 10:
+        alert = String()
+        alert.data = "10 seconds have passed"
+        pub.publish(alert)
 
+    if counter == 60:
+        secondalert = String()
+        secondalert.data = "1 minute has passed!"
+        pub.publish(secondalert)
 
-    msg = String()
-    msg.data = f"{time_str} ({counter}s)"
-    pub.publish(msg)
     counter += 1
 
 
