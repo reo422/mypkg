@@ -25,6 +25,8 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
+            'timepublisher = mypkg.timepublisher:main',
+            'timealert = mypkg.timealert:main'
         ],
     },
 )
