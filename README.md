@@ -40,7 +40,7 @@ temperaturepublisherノードは、サンプルデータを使用して体温を
 
 # テスト環境
 Ubuntu 20.04
-ryuichiueda/ubuntu22.04-ros2:latest
+<br>ryuichiueda/ubuntu22.04-ros2:latest
 
 # ライセンス
 このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されています。
