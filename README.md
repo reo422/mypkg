@@ -1,8 +1,6 @@
 # 温度アラートシステム
 
 [![test](https://github.com/reo422/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/reo422/mypkg/actions/workflows/test.yml)
-[![test](https://github.com/reo422/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/reo422/mypkg/actions/workflows/test.yml)
-
 
 このROS2パッケージは、体温の測定結果に基づいてアラートを送信する機能を提供します。
 
@@ -42,6 +40,7 @@ temperaturepublisherノードは、サンプルデータを使用して体温を
 
 # テスト環境
 Ubuntu 20.04
+ryuichiueda/ubuntu22.04-ros2:latest
 
 # ライセンス
 このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されています。
