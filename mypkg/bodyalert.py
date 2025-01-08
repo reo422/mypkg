@@ -7,15 +7,19 @@ from std_msgs.msg import String
 
 rclpy.init()
 node = Node("bodyalert")
+pub = node.create_publisher(String, "bodyalertmessage", 10)
 
 def cb(msg):
     bt = float(msg.data)
+    btalert = String()
     if bt < 36.0:
-        node.get_logger().info(f"{bt:.1f}度:体を温めてください。")
+        btalert.data = f"{bt:.1f}度:体を温めてください。"
     elif 36.0 <= bt < 37.0:
-        node.get_logger().info(f"{bt:.1f}度:健康です。")
+        btalert.data = f"{bt:.1f}度:健康です。"
     elif 37.0 <= bt:
-        node.get_logger().info(f"{bt:.1f}度:病院に行きましょう。")
+        btalert.data = f"{bt:.1f}度:病院に行きましょう。"
+
+    pub.publish(btalert)
 
 
 def main():
