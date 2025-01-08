@@ -18,7 +18,6 @@ def cb(msg):
         btalert.data = f"{bt:.1f}度:健康です。"
     elif 37.0 <= bt:
         btalert.data = f"{bt:.1f}度:病院に行きましょう。"
-
     pub.publish(btalert)
 
 
