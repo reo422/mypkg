@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 # SPDX-FileCopyrightText: 2024 Reo Isaka
 # SPDX-License-Identifier: BSD-3-Clause
 
@@ -8,7 +8,9 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 10 ros2 launch mypkg temp.launch.py > /tmp/mypkg.log
+ros2 launch mypkg temp.launch.py &
+
+timeout 10 ros2 topic echo /bodyalertmessage > /tmp/mypkg.log
 
 cat /tmp/mypkg.log | grep '体を温めてください。'
 cat /tmp/mypkg.log | grep '健康です。'
