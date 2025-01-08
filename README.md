@@ -13,7 +13,7 @@ bodyalertノードは、temperaturealertsトピックから体温データを受
 35.8度:体を温めてください。<br>36.5度:健康です。<br>38.0度:病院に行きましょう。
 
 # 使用方法
-1. このパッケージをセットアップし、依存関係をインストールします。
+1. このパッケージをセットアップします。
 2. temperaturepublisherノードを起動し、体温データを公開します。
 ```bash
    ros2 run mypkg temperaturepublisher
