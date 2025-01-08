@@ -22,17 +22,24 @@ bodyalertノードは、temperaturealertsトピックから体温データを受
 ```bash
    ros2 run mypkg bodyalert
 ```
+4. また別のターミナルで、以下のコマンドを実行するとメッセージが表示されます。
+```bash
+   ros2 topic echo /bodyalertmessage
+```
 
 # 実行例
-以下は、temperaturepublisherノードとbodyalertノードの実行結果
+以下は、temperaturepublisherノードとbodyalertノードの実行結果の一例です。
 ```bash
-[INFO] [1736085876.774851391] [bodyalert]: 35.8度:体を温めてください。
-[INFO] [1736085877.762016491] [bodyalert]: 36.5度:健康です。
-[INFO] [1736085878.761839937] [bodyalert]: 38.0度:病院に行きましょう。
-[INFO] [1736085881.760506401] [bodyalert]: 35.8度:体を温めてください。
-[INFO] [1736085882.761341638] [bodyalert]: 37.4度:病院に行きましょう。
-[INFO] [1736085884.761043553] [bodyalert]: 36.4度:健康です。
-[INFO] [1736085885.760956194] [bodyalert]: 36.3度:健康です。
+data: 35.8度:体を温めてください。
+---
+data: 36.5度:健康です。
+---
+data: 38.0度:病院に行きましょう。
+---
+data: 35.8度:体を温めてください。
+---
+data: 37.4度:病院に行きましょう。
+---
 ・・・
 ```
 # 注意事項
