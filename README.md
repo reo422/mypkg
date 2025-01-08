@@ -1,6 +1,8 @@
 # 温度アラートシステム
 
 [![test](https://github.com/reo422/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/reo422/mypkg/actions/workflows/test.yml)
+[![test](https://github.com/reo422/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/reo422/mypkg/actions/workflows/test.yml)
+
 
 このROS2パッケージは、体温の測定結果に基づいてアラートを送信する機能を提供します。
 
